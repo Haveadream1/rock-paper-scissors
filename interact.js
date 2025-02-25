@@ -24,6 +24,7 @@ const array = ['rock','paper','scissors'];
 function getComputerChoice(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     const choice = array[randomIndex];
+
     return choice;
 }
 
@@ -31,6 +32,7 @@ function setDisplay(playerChoice, computerChoice) {
     roundSentence = `You won, ${playerChoice} beat ${computerChoice}`;
     playerScore++;
     roundScore = (`${playerScore} - ${computerScore}`);
+    
     return playerScore, computerScore;
 }
 
@@ -84,9 +86,11 @@ againButton.addEventListener('click', () => {
 function resetScore() {
     playerScore = 0;
     computerScore = 0;
+
     rock.disabled = false;
     paper.disabled = false;
     scissors.disabled = false;
+
     return playerScore, computerScore;
 }
 
