@@ -12,16 +12,16 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <section class="alert-section">
+    <section class="alert-section" aria-live="assertive"> <!-- announce the changes to the screen readers-->
         <section class="alert-container">
             <p class="alert-text">You Win</p>
-            <button class="again-button">Play Again ?</button>
+            <button type="button" class="again-button">Play Again ?</button>
         </section>
     </section> 
 
     <header> 
         <h1>Rock Paper Scissors</h1>
-        <p class="score">0 - 0</p>
+        <p class="score" aria-live="polite">0 - 0</p>
     </header>
 
     <main>
@@ -29,9 +29,9 @@
             <h2>Player</h2>
 
             <section class="choice-section">
-                <button class="rock"><img src="pictures/🦆 emoji _fisted hand sign_.jpg" alt="Fist emoji"></button>
-                <button class="paper"><img src="pictures/🦆 emoji _raised hand with fingers splayed_.jpg" alt="Palm emoji"></button>
-                <button class="scissors"><img src="pictures/🦆 emoji _victory hand_.jpg" alt="Peace emoji"></button>
+                <button type="button" class="rock" aria-label="Rock emoji"><img src="pictures/🦆 emoji _fisted hand sign_.jpg" alt="Fist emoji"></button>
+                <button type="button" class="paper"  aria-label="Paper emoji"><img src="pictures/🦆 emoji _raised hand with fingers splayed_.jpg" alt="Palm emoji"></button>
+                <button type="button" class="scissors" aria-label="Scissors emoji"><img src="pictures/🦆 emoji _victory hand_.jpg" alt="Peace emoji"></button>
             </section>
 
             <p class="info">Choose a hand</p>
@@ -39,13 +39,13 @@
 
         <section class="computer-section">
             <h2>Computer</h2>
-            <button class="computer-choice-img" disabled>?</button>
-            <p class="info">The computer is choosing...</p>
+            <button type="button" class="computer-choice-img" disabled>?</button>
+            <p class="info" aria-live="polite">The computer is choosing...</p>
         </section> 
     </main>
 
     <footer>
-        <p class="result"></p>
+        <p class="result" aria-live="assertive"></p>
     </footer>
 </body>
 </html>
