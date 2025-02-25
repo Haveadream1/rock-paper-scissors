@@ -16,5 +16,14 @@ The main purpose of this project is to get familiar with the DOM manipulation in
 [Icons](https://www.figma.com/community/plugin/1149932582578357095/emojitwo-emojis-by-iconduck?searchSessionId=ly5hhyxu-svrd8lr0umi)
 
 ## TODO
+1. CSS
+* Review background-color
+* Review layout
+* Size up the round text
+2. JS
+* Change each round computer text
+* Add instuctions
+* Use only the necessary arrow functions
+
   Add credit icon  
-  Review background-color
+
