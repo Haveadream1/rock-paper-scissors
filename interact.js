@@ -21,20 +21,20 @@ const result = document.querySelector('.result');
 const computerChoiceImage = document.querySelector('.computer-choice-img');
 
 const array = ['rock','paper','scissors'];
-const getComputerChoice = (array) => {
+function getComputerChoice(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     const choice = array[randomIndex];
     return choice;
 }
 
-const setDisplay = (playerChoice, computerChoice) => {
+function setDisplay(playerChoice, computerChoice) {
     roundSentence = `You won, ${playerChoice} beat ${computerChoice}`;
     playerScore++;
     roundScore = (`${playerScore} - ${computerScore}`);
     return playerScore, computerScore;
 }
 
-const playRound = (playerChoice, computerChoice) => {
+function playRound(playerChoice, computerChoice) {
     if (playerChoice === 'rock' && computerChoice === 'scissors') {
         setDisplay(playerChoice, computerChoice);
     } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
@@ -52,7 +52,7 @@ const playRound = (playerChoice, computerChoice) => {
     return playerScore, computerScore;
 }
 
-const displayChoice = () => {
+function displayChoice() {
     if (computerChoice === 'rock') {
         computerChoiceImage.innerHTML = '<img src="pictures/🦆 emoji _fisted hand sign_.jpg" alt="Fist emoji">';
     } else if (computerChoice === 'paper') {
@@ -62,7 +62,7 @@ const displayChoice = () => {
     }
 }
 
-const displayInfoRound = () => {
+function displayInfoRound() {
     score.textContent = roundScore;
     header.appendChild(score);
 
@@ -70,7 +70,7 @@ const displayInfoRound = () => {
     footer.appendChild(result);
 }
 
-const displayAlert = () => {
+function displayAlert() {
     alertSection.style.visibility= 'visible';
 
     alertText.textContent = textResult;
@@ -90,7 +90,7 @@ function resetScore() {
     return playerScore, computerScore;
 }
 
-const stopGame = () => {
+function stopGame() {
     rock.disabled = true;
     paper.disabled = true;
     scissors.disabled = true;
@@ -111,7 +111,7 @@ const stopGame = () => {
     resetScore();
 }
 
-const launchGame = (playerChoice, computerChoice) => {
+function launchGame(playerChoice, computerChoice) {
 
     if ((playerScore === 3) || (computerScore === 3)) {
         stopGame();
