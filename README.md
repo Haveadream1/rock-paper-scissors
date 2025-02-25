@@ -23,7 +23,3 @@ The main purpose of this project is to get familiar with the DOM manipulation in
 2. JS
 * Change each round computer text
 * Add instuctions
-* Use only the necessary arrow functions
-
-  Add credit icon  
-
